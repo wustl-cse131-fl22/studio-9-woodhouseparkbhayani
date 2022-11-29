@@ -19,9 +19,28 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
+		Map<String,String> info = new HashMap<>();
+		boolean cont = true;
+		
+		info.put("Hannah", "5'8");
+		info.put("Selina", "5'4");
+		
+		while(cont == true)
+		{
+			System.out.println("Name?");
+			String name = in.next();
+			
+			if (name.equals("quit"))
+				cont = false;
+			else if (name.equals("Selina")||name.equals("Hannah"))
+			{
+				System.out.println(name + " " + info.get(name));
+			}
+			else
+			{
+				System.out.println("Not in our group !");
+			}
+		}
 
 	}
 }
